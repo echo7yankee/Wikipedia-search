@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 400;
+  font-size: 1.6rem;
+  color: #c5c6c7;
+  background-color: #1f2833;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 15rem;
+  height: auto;
+}
+
+.logo-title {
+  font-size: 2.7rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+#form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+
+.form-input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 0.1rem solid #c5c6c7;
+  width: 50%;
+  font-size: 2.5rem;
+  color: #c5c6c7;
+  text-indent: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-btn {
+  width: 20%;
+  background-color: transparent;
+  border: solid 0.2rem #45a29e;
+  border-radius: 0.3rem;
+  padding: 1rem 1.5rem;
+  color: #c5c6c7;
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-btn:hover {
+  background-color: #45a29e;
+  color: #1f2833;
+}
+
+.form-btn:active {
+  opacity: 0.5;
+}
