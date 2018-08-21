@@ -3,6 +3,7 @@ const formInput = document.querySelector(".form-input");
 const loadingGif = document.querySelector(".loading");
 const output = document.querySelector(".output");
 
+const error = document.createElement("p");
 let loadingState = true;
 
 //VIEW DATA
@@ -10,8 +11,17 @@ const viewData = e => {
   e.preventDefault();
 
   if (formInput.value === "") {
+    error.classList.add("error");
+    error.textContent = "Please type something in the search field";
+    form.appendChild(error);
+    setTimeout(() => {
+      error.textContent = "";
+      error.classList.remove("error");
+    }, 3000);
     showGif(false);
   } else {
+    error.classList.remove("error");
+    error.textContent = "";
     showGif(true);
 
     const origin = "https://en.wikipedia.org";
@@ -43,7 +53,7 @@ const showData = data => {
     title.textContent = result.title;
     const paragraph = document.createElement("p");
     paragraph.classList.add("output-text");
-    paragraph.innerHTML = result.snippet;
+    paragraph.innerHTML = result.snippet + "...";
     const link = document.createElement("a");
     link.classList.add("output-link");
     link.textContent = "Go to source...";
